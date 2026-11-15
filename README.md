@@ -35,13 +35,13 @@ Feature importance analysis confirmed the underlying physicochemical principles:
 ## 🔬 Virtual Screening of Novel Compounds
 The trained model was tested on well-known pharmaceutical compounds excluded from the training set:
 
-| Compound | Predicted log S | Molar Solubility (mol/L) | Solubility Classification |
-| :--- | :---: | :---: | :--- |
-| **Caffeine** | `-0.98` | `0.10471` | Very soluble |
-| **Paracetamol** | `-1.25` | `0.05623` | Soluble |
-| **Aspirin** | `-1.82` | `0.01514` | Moderately soluble |
-| **Ibuprofen** | `-3.65` | `0.00022` | Poorly soluble |
-| **Cholesterol** | `-6.42` | `0.0000004` | Practically insoluble |
+| Compound | Predicted log S |
+| :--- | :---: |
+| **Caffeine** | `-0.98` |
+| **Paracetamol** | `-1.25` |
+| **Aspirin** | `-1.82` |
+| **Ibuprofen** | `-3.65` |
+| **Cholesterol** | `-6.42` |
 
 ## 🚀 Getting Started
 
