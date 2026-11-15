@@ -1,4 +1,4 @@
-# QSAR Modeling: Aqueous Solubility Prediction (ESOL)
+# QSAR Modeling: Aqueous Solubility Prediction
 
 A regression-based **QSAR (Quantitative Structure-Activity Relationship)** modeling project designed to predict the aqueous solubility (log S) of organic compounds directly from their chemical structures (SMILES).
 
