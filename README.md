@@ -28,10 +28,11 @@ A **Random Forest Regressor** was trained using an 80/20 train-test split (`rand
 | **5-Fold Cross-Validation** | `0.86 ± 0.02` | `0.78` |
 | **Hold-out Test Set** | **`0.89`** | **`0.69`** |
 
+![Predicted vs Experimental](images/pred_vs_exp.png)
 ### Model Interpretability (Feature Importance)
 Feature importance analysis confirmed the underlying physicochemical principles: lipophilicity (**MolLogP**) is the primary driver of solubility predictions (>80% relative importance), followed by molecular weight (**MolWt**).
 
-
+![Feature Importance](images/feature_importance.png)
 ## Virtual Screening of Novel Compounds
 The trained model was tested on well-known pharmaceutical compounds excluded from the training set:
 
