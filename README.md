@@ -18,8 +18,12 @@ Aqueous solubility is a critical ADME property in early-stage drug discovery. Th
 ## Dataset & Featurization
 The models are trained and evaluated on the benchmark **Delaney (ESOL)** dataset containing **1,144 organic compounds** with experimentally measured aqueous solubility ($\log \text{mol/L}$).
 
+![Predicted vs Experimental](images/pred_vs_exp.png)
+
 Four feature representations were generated using **RDKit**:
 * **Delaney Descriptors (4 features):** `MolLogP` (lipophilicity), `MolWt` (molecular weight), `NumRotatableBonds` (flexibility), and `AromaticProportion`.
+  
+  ![Feature Importance](images/feature_importance.png)
 * **Morgan Fingerprints / ECFP4 (2,048 bits):** Circular topological fingerprints (`radius=2`, `fpSize=2048`) capturing local substructural environments.
 * **Combined Representation (2,052 features):** Concatenation of Delaney physicochemical properties and Morgan bit vectors.
 * **Full RDKit 2D Descriptors (217 features):** Comprehensive set of topological, electronic, and constitutional molecular descriptors.
@@ -50,12 +54,6 @@ All models were evaluated using **5-Fold Cross-Validation** (`GroupKFold` for sc
 * **Physicochemical Descriptors vs. Fingerprints:** Binary Morgan fingerprints alone ($R^2 \approx 0.69–0.72$) underperform compared to continuous physicochemical descriptors because aqueous solubility is governed by global molecular properties (lipophilicity, molecular weight, polar surface area) rather than isolated local substructures.
 * **Impact of Scaffold Splitting:** Evaluating on unseen **Bemis-Murcko scaffolds** causes an expected drop in $R^2$ (~0.09–0.12) and higher fold variance, reflecting the real-world challenge of generalizing to novel chemical series.
 * **Feature Importance:** Lipophilicity (**`MolLogP`**) accounts for **>80%** of the predictive power in the baseline model, aligning with established solvation thermodynamics.
-
-<!--
-![Predicted vs Experimental](images/pred_vs_exp.png)
-![Feature Importance](images/feature_importance.png)
--->
-
 ---
 
 ## Virtual Screening of Pharmaceutical Compounds
